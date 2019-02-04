@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context=".activities.BookEditorActivity">
+
+    <include
+        android:id="@+id/tb_book_details"
+        layout="@layout/toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/image_height"
+        >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/image_bg"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_alignParentTop="true"
+            />
+
+        <TextView
+            android:id="@+id/txt_book_name"
+            style="@style/EditorFieldStyle"
+            tools:text="Book name"
+            android:textSize="@dimen/text_size_very_large"
+            android:paddingStart="@dimen/padding_big"
+            android:paddingEnd="@dimen/padding_big"
+            android:paddingBottom="@dimen/padding_big"
+            android:layout_above="@+id/txt_book_author"
+            android:fontFamily="sans-serif-condensed"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            />
+
+        <TextView
+            android:id="@+id/txt_book_author"
+            style="@style/EditorFieldStyle"
+            android:layout_alignParentBottom="true"
+            tools:text="Book author"
+            android:padding="@dimen/padding_small"
+            android:paddingStart="@dimen/padding_big"
+            android:paddingEnd="@dimen/padding_big"
+            android:layout_marginBottom="@dimen/padding_large"
+            android:textSize="@dimen/text_size_intermediate"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textColor="@android:color/white"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        style="@style/CategoryLayoutStyle"
+        android:layout_marginTop="@dimen/padding_big"
+        >
+
+        <TextView
+            style="@style/CategoryTextStyle"
+            android:text="@string/stock_details" />
+
+        <LinearLayout style="@style/EditorFieldLayoutStyle">
+
+            <TextView
+                style="@style/HeadingTextStyle"
+                android:paddingTop="@dimen/padding_medium"
+                android:text="@string/book_price" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/padding_medium"
+                >
+
+                <TextView
+                    android:id="@+id/tv_rupee_symbol"
+                    style="@style/EditorUnitsStyle"
+                    android:layout_alignBaseline="@+id/txt_book_price" />
+
+                <TextView
+                    android:id="@+id/txt_book_price"
+                    style="@style/EditorFieldStyle"
+                    android:layout_alignParentStart="true"
+                    android:paddingStart="@dimen/padding_big"
+                    android:paddingEnd="@dimen/zero"
+                    tools:text="Book Price" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/HeadingTextStyle"
+                android:paddingTop="@dimen/padding_medium"
+                android:text="@string/book_quantity" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:paddingTop="@dimen/padding_medium"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                >
+                <ImageButton
+                    android:id="@+id/img_btn_minus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:padding="@dimen/padding_small"
+                    android:background="@drawable/square_button_enabled"
+                    app:srcCompat="@drawable/minus"
+                    />
+                <TextView
+                    android:id="@+id/txt_book_quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="@dimen/qty_min_width"
+                    android:layout_toEndOf="@id/img_btn_minus"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:fontFamily="sans-serif-light"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:paddingStart="@dimen/padding_medium"
+                    android:paddingEnd="@dimen/padding_medium"
+                    tools:text="Book quantity" />
+
+                <ImageButton
+                    android:id="@+id/img_btn_plus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/padding_small"
+                    android:layout_toEndOf="@id/txt_book_quantity"
+                    android:background="@drawable/square_button_enabled"
+                    app:srcCompat="@drawable/plus"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        style="@style/CategoryLayoutStyle"
+        android:layout_marginTop="@dimen/padding_big"
+        >
+
+        <TextView
+            style="@style/CategoryTextStyle"
+            android:text="@string/supplier_details" />
+
+        <LinearLayout style="@style/EditorFieldLayoutStyle">
+
+            <TextView
+                style="@style/HeadingTextStyle"
+                android:paddingTop="@dimen/padding_medium"
+                android:text="@string/supplier_name" />
+
+            <TextView
+                android:id="@+id/txt_supplier_name"
+                android:paddingTop="@dimen/padding_medium"
+                style="@style/EditorFieldStyle"
+                tools:text="Supplier Name" />
+
+            <TextView
+                style="@style/HeadingTextStyle"
+                android:paddingTop="@dimen/padding_medium"
+                android:text="@string/supplier_number"
+                />
+
+            <TextView
+                android:id="@+id/txt_supplier_number"
+                style="@style/EditorFieldStyle"
+                android:paddingTop="@dimen/padding_medium"
+                android:autoLink="phone"
+                android:drawableStart="@drawable/call"
+                android:drawablePadding="@dimen/padding_medium"
+                tools:text="Supplier Phone Number"
+                tools:ignore="RtlSymmetry" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

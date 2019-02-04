@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
+    tools:context=".activities.BookEditorActivity">
+
+    <include
+        android:id="@+id/tb_editor"
+        layout="@layout/toolbar" />
+
+    <LinearLayout style="@style/CategoryLayoutStyle">
+
+        <TextView
+            style="@style/CategoryTextStyle"
+            android:text="@string/book_details" />
+
+        <LinearLayout style="@style/EditorFieldLayoutStyle">
+
+            <TextView
+                style="@style/HeadingTextStyle"
+                android:text="@string/book_title_required" />
+
+            <EditText
+                android:id="@+id/etxt_book_name"
+                style="@style/EditorFieldStyle"
+                android:inputType="text"
+                tools:text="Book name" />
+
+            <TextView
+                style="@style/HeadingTextStyle"
+                android:text="@string/book_author_required" />
+
+            <EditText
+                android:id="@+id/etxt_book_author"
+                style="@style/EditorFieldStyle"
+                android:inputType="text"
+                tools:text="Book author" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/CategoryLayoutStyle">
+
+        <TextView
+            style="@style/CategoryTextStyle"
+            android:text="@string/stock_details" />
+
+        <LinearLayout style="@style/EditorFieldLayoutStyle">
+
+            <TextView
+                style="@style/HeadingTextStyle"
+                android:text="@string/book_price_default" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_rupee_symbol"
+                    style="@style/EditorUnitsStyle"
+                    android:layout_alignBaseline="@+id/etxt_book_price" />
+
+                <EditText
+                    android:id="@+id/etxt_book_price"
+                    style="@style/EditorFieldStyle"
+                    android:layout_alignParentStart="true"
+                    android:inputType="number"
+                    android:paddingStart="@dimen/padding_big"
+                    android:paddingEnd="@dimen/zero"
+                    tools:text="Book Price" />
+            </RelativeLayout>
+
+            <TextView
+                style="@style/HeadingTextStyle"
+                android:text="@string/book_quantity_default" />
+
+            <EditText
+                android:id="@+id/etxt_book_quantity"
+                style="@style/EditorFieldStyle"
+                android:inputType="number"
+                tools:text="Book quantity" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout style="@style/CategoryLayoutStyle">
+
+        <TextView
+            style="@style/CategoryTextStyle"
+            android:text="@string/supplier_details" />
+
+        <LinearLayout style="@style/EditorFieldLayoutStyle">
+
+            <TextView
+                style="@style/HeadingTextStyle"
+                android:text="@string/supplier_name_required" />
+
+            <EditText
+                android:id="@+id/etxt_supplier_name"
+                style="@style/EditorFieldStyle"
+                android:inputType="text"
+                tools:text="Supplier Name" />
+
+            <TextView
+                style="@style/HeadingTextStyle"
+                android:text="@string/supplier_number_required" />
+
+            <EditText
+                android:id="@+id/etxt_supplier_number"
+                style="@style/EditorFieldStyle"
+                android:inputType="phone"
+                tools:text="Supplier Phone Number" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

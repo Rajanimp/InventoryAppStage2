@@ -1,0 +1,61 @@
+<resources>
+    <string name="app_name">Books Corner</string>
+    <string name="action_insert_dummy_data">Insert Dummy Data</string>
+    <string name="toolbar_title">Book Store Inventory</string>
+    <string name="fab_tooltip">Add an item</string>
+    <string name="toolbar_title_add_book_details">Add Book Details</string>
+    <string name="toolbar_title_edit_book_details">Edit Book Details</string>
+    <string name="toolbar_title_display_book_details">Book Details</string>
+    <string name="action_delete_all_entries">Delete All Entries</string>
+    <string name="save">Save</string>
+    <string name="action_delete">Delete</string>
+    <string name="book_details">Book Details</string>
+    <string name="book_title_required">Title (Required)</string>
+    <string name="book_title">Title</string>
+    <string name="book_author_required">Author (Required)</string>
+    <string name="book_author">Author</string>
+    <string name="supplier_details">Supplier Details</string>
+    <string name="supplier_name_required">Name (Required)</string>
+    <string name="supplier_name">Name</string>
+    <string name="supplier_number_required">Number (Required)</string>
+    <string name="supplier_number">Number</string>
+    <string name="stock_details">Stock Details</string>
+    <string name="book_price_default">Price (Default is 0)</string>
+    <string name="book_price">Price</string>
+    <string name="book_quantity_default">Quantity (Default is 0)</string>
+    <string name="book_quantity">Quantity</string>
+    <string name="rupee_symbol">\u20B9</string>
+    <string name="editor_insert_book_failed">Error saving book</string>
+    <string name="editor_insert_book_successful">Book saved</string>
+    <string name="enter_book_name">Please enter book name</string>
+    <string name="enter_author_name">Please enter author name</string>
+    <string name="enter_valid_price">Please enter a valid price</string>
+    <string name="enter_supplier_name">Please enter supplier name</string>
+    <string name="enter_supplier_number">Please enter supplier number</string>
+    <string name="provide_valid_data">Please fill in all blank fields. All fields are required.</string>
+    <string name="unknown_quantity" translatable="false">0</string>
+    <string name="unknown_price" translatable="false">0</string>
+    <string name="out_of_stock">Out of Stock</string>
+    <string name="toast_out_of_stock">Item is out of stock</string>
+    <string name="in_stock">In stock:\u0020%1$d</string>
+    <string name="price_display">\u20B9\u0020%1$d</string>
+    <string name="empty_view_title_text">Empty bookshelves!! :(</string>
+    <string name="empty_view_subtitle_text1">Add a\u0020\u0020</string>
+    <string name="empty_view_subtitle_text2">\u0020 by clicking on the yellow button below :)</string>
+    <string name="editor_update_book_failed">Error saving book details</string>
+    <string name="editor_update_book_successful">Book details saved</string>
+    <string name="unsaved_changes_dialog_msg">Discard your changes and quit editing?</string>
+    <string name="discard">Discard</string>
+    <string name="keep_editing">Keep Editing</string>
+    <string name="editor_delete_book_successful">Book deleted</string>
+    <string name="editor_delete_book_failed">Error deleting book</string>
+    <string name="delete_dialog_msg">Delete this book?</string>
+    <string name="delete_all_dialog_msg">Erase all data?</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+
+    <plurals name="display_text">
+        <item quantity="one">The book table contains %1$d book.\n</item>
+        <item quantity="other">The book table contains %1$d books.\n</item>
+    </plurals>
+</resources>

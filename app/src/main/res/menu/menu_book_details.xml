@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".activities.BookCatalogActivity">
+
+    <item
+        android:id="@+id/action_book_details_delete"
+        android:title="@string/action_delete"
+        android:icon="@drawable/delete"
+        app:showAsAction="always" />
+</menu>
